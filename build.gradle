@@ -24,6 +24,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-devtools'
 
+	implementation 'org.springframework.boot:spring-boot-starter-validation' //validation ( @NotEmpty )
+
 	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.6' //이거만 추가하면 쿼리의 ?가 해결됩니다!!
 
 	implementation 'junit:junit:4.12' //Runwith를 하기위해서 설치했습니다..

@@ -1,13 +1,16 @@
 package jpabook.jpashop.domain;
 
 import jpabook.jpashop.domain.item.Item;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Getter @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED) //아래의 Protected와 같은 기능
 public class OrderItem {
 
     @Id @GeneratedValue
@@ -35,6 +38,9 @@ public class OrderItem {
         item.removeStock(count);
         return orderItem;
     }
+    
+    //public OrderItem(){} //이걸 해놓으면 다른 곳에서 OrderItem 을 생성하는 것을 막을 수 있다.
+
 
     //==비즈니스 로직==//
     public void cancel() {
