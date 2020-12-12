@@ -17,7 +17,7 @@ public class ItemRepository {
         if(item.getId() == null){
             em.persist(item);
         } else {
-            em.merge(item); // update 비슷한 것
+            em.merge(item); // update 비슷한 것 왠만하면 merge가 아닌 ItemService의 변경감지를 이용하도록합니다.
         }
     }
 
