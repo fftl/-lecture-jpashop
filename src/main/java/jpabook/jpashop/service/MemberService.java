@@ -48,4 +48,10 @@ public class MemberService {
     public Member findOne(Long memberId){
         return memberRepository.findOne(memberId); //find 어쩌고는 다 repository 에서 만들어 놓은 것.
     }
+
+    @Transactional
+    public void update(Long id, String name){
+        Member member = memberRepository.findOne(id);
+        member.setName(name);
+    }
 }

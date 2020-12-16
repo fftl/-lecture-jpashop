@@ -57,6 +57,7 @@ public class ItemController {
         form.setName(item.getName());
         form.setPrice(item.getPrice());
         form.setStockQuantity(item.getStockQuantity());
+        form.setIsbn(item.getIsbn());
         form.setAuthor(item.getAuthor());
 
         model.addAttribute("form", form);
@@ -82,6 +83,6 @@ public class ItemController {
         //만약 업데이트 할 것이 많다면 dto를 만들어 쓴다.
 //
 
-        return "redirect:items";
+        return "redirect:/";
     }
 }
