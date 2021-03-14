@@ -40,6 +40,7 @@ public class MemberController {
         member.setAddress(address);
 
         memberService.join(member);
+
         return "redirect:/"; //이렇게 하면 첫번째 페이지 / 페이지로 돌아가게 됩니다.
     }
 
